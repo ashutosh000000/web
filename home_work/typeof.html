@@ -1,0 +1,17 @@
+<input type="text" id="t1" ></input><br>
+<input type="button" id="b1" value="OK" onclick=fun()></input><br>
+<input type="text" id="t2" ></input><br>
+<input type="text" id="t3" ></input>
+
+
+<script>
+function fun()
+{
+var a=document.getElementById("t1").value;
+vae b=String(a);
+var p=typeof(b);
+document.getElementById("t2").value=p;
+document.getElementById("t3").value=b;
+
+}
+</script>

@@ -1,0 +1,19 @@
+
+<html>
+<input type="text" id="v2"></input><br>
+<input type="button" value="OK" onclick=fun()></input>
+<p id ="v1">......</p>
+</html>
+<script>
+function fun() 
+{
+var a;
+var v=confirm("Insuficient Memory");
+if(v==true){
+a="you press OK"
+}else{
+a="you press Cancel"
+}
+document.getElementById("v1").innerHTML=a;
+}
+</script>

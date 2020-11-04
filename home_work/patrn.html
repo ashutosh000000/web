@@ -1,0 +1,21 @@
+<html>
+<input type="text" id="d1"></input>
+<input type="button" value="ok" onclick=fun()></input>
+<p id="d2">.....</p>
+</html>
+
+<script>
+function fun(){
+var g=document.getElementById("d1").value;
+var pat="";
+for(var t=0;t<g;t++)
+{
+for(var h=0;h<g;h++)
+{
+pat=pat+"*";
+}
+pat=pat+"<br>";
+}
+//document.getElementById("d2").innerHTML="<h5>"+pat+"</h5>";
+}
+</script>

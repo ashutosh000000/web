@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+.d1
+{
+position:absolute;
+opacity:0.4;
+left:0px;
+transition:0s;
+}
+.d2
+{
+position:absolute;
+top:250px;
+color:black;
+word-padding:3px;
+left:100px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="d1" data-speed=6 data-distance=800 data-altitude=200>
+
+<img src="/C:/Users/HP/Downloads/imagess/heart.png" />
+</div>
+<div class="d2"><span><h1><b>Ashutosh Jaiswal Ashutosh Jaiswal Ashutosh Jaiswal Ashutosh Jaiswal</b></h1></span></div>
+</body>
+</html>
+
+<script>
+var distance,speed,altitude;
+function fun(){
+var d1=document.querySelectorAll("div.d1");
+for(var o=0;o<d1.length;o++)
+{
+distance=d1[o].dataset.distance;
+speed=d1[o].dataset.speed;
+altitude=d1[o].dataset.altitude;
+d1[o].style.top=altitude+"px";
+d1[o].style.transitionDuration=speed+"s";
+d1[o].style.left=distance+"px";
+}
+
+}
+window.addEventListener("load",fun);
+</script>

@@ -1,0 +1,16 @@
+<html>
+<p id="d1">.....</p>
+<br><input type="button" value="ok" onclick=fun()></input>
+</html>
+<script>
+function fun()
+{
+var msg={1:"Ashutosh",2:"alok",3:"nitin",4:"vaibhav"};
+var v;
+var t="";
+for(v in msg){
+t=t+v+" = "+msg[v]+" "+"<br>";
+}
+document.write("<h5>"+t+"</h5>");
+}
+</script>

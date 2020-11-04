@@ -1,0 +1,26 @@
+<html>
+<input type="text" id="v1" ></input><br></br>
+<input type="Button" value="OK" onclick=fun()></input>
+<p id="k1">.....</p>
+</html>
+<script>
+function fun(){
+var a=parseInt(document.getElementById("v1").value);
+switch(a){
+case 1:document.getElementById("k1").innerHTML="<h5>Monday</h5>";
+break;
+case 2:document.getElementById("k1").innerHTML="<h5>Tuesday</h5>";
+break;
+case 3:document.getElementById("k1").innerHTML="<h5>Wednesday</h5>";
+break;
+case 4:document.getElementById("k1").innerHTML="<h5>Thursday</h5>";
+break;
+case 5:document.getElementById("k1").innerHTML="<h5>Friday</h5>";
+break;
+case 6:document.getElementById("k1").innerHTML="<h5>Saturday</h5>";
+break;
+default:document.getElementById("k1").innerHTML="<h5>Please Insert The Number From 1-6</h5>";
+break;
+}
+}
+</script>

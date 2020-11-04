@@ -1,0 +1,19 @@
+<input type="text" id="t1" placeholder="enter your name"></input><br>
+<input type="text" id="t2" placeholder="enter last name"></input><br>
+<input type="button" value="OK" onclick=fun()></input><br>
+<input type="text" placeholder="output" id="t3"></input>
+ 
+<script>
+function fun()
+{
+var a=document.getElementById("t1").value;
+var b=document.getElementById("t2").value;
+var ar=[a,b];
+var str="";
+for(var t=0;t<ar.length;t++)
+{
+str=str+ar[t]+" ";
+}
+document.getElementById("t3").value=str;
+}
+</script>

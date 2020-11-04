@@ -1,0 +1,21 @@
+<input type="radio" name="g" id="r1" value="m">male</input>
+<input type="radio" name="g" id="r2" value="f">female</input><br>
+<p id="b1">.....</p>
+<input type="button" value="ok" onclick=fun()></input>
+
+
+<script>
+var fun=function(){
+//var rad=document.getElementById("r1").value;
+//rad=document.getElementById("r2").value;
+
+//document.getElementById("b1").innerHTML="<h5>HELLO "+rad+"</h5>"
+if(document.getElementById("r1").checked){
+document.getElementById("b1").innerHTML="<h5>HELLO Mr</h5>"
+}
+else{
+document.getElementById("b1").innerHTML="<h5>HELLO Miss</h5>"
+}
+
+}
+</script>

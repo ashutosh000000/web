@@ -1,0 +1,23 @@
+<p id="p1">.....</p>
+<p id="p2"></p>
+<input type="button" value="start" onclick=start()></input>
+<input type="button" value="stop" onclick=stop()></input>
+
+<script>
+var ID=0; 
+var count=0;
+
+function start(){
+ID=setInterval(text,2000);
+count++;
+}
+function stop()
+{
+clearInterval(ID);
+}
+function text()
+{
+document.getElementById("p1").innerHTML="timer="+count;
+count++;
+}
+</script>

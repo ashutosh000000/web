@@ -1,0 +1,41 @@
+<br>
+</br>
+<br>
+<img id="i1" onmouseover=zoomIn() onmouseout=zoomOut()  alt="this image is corrupted" src="/C:/Users/HP/Downloads/imagess/heart1.jpg" />
+<script>
+var width=203;
+var diff=2;
+var ID=0;
+function zoomIn()
+{
+clearInterval(ID);
+ID=setInterval(large,20);
+}
+function zoomOut()
+{
+ID=setInterval(small,20);
+} 
+
+function large()
+{
+if(width<250){
+width=width+diff;
+document.getElementById("i1").style.width=width;
+}
+else{
+clearInterval(ID);
+}
+}
+
+function small()
+{
+if(width>203){
+width=width-diff;
+document.getElementById("i1").style.width=width;
+}
+else{
+clearInterval(ID);
+}
+}
+
+</script>

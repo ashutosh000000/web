@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+
+.keys
+{
+background-image:url("/C:/Users/HP/Downloads/imagess/430892.png");
+align-items:left;
+justify-content:center;
+}
+
+.key
+{
+border:4px solid white;
+border-radius:5px;
+
+font-size:12px;
+padding:10px 0px;
+width:100px;
+margin:16px;
+transition:all 0.2s;
+text-align:center;
+background-color:rgba(0,0,0,0.2);
+}
+
+.playing
+{
+transform:scale(1.1);
+border-color:#ffc600;
+box-shadow: 0, 0, 0.4 #ffc600;
+}
+
+kbd
+{
+display:block;
+font-size:40px;
+}
+
+.sound
+{
+letter-spacing:1px;
+text-transform:uppercase;
+color:#ffC600;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="keys">
+<div data-key="65" class="key">
+<kbd>A</kbd>
+<span class="sound">Applause</span>
+</div>
+<div data-key="83" class="key">
+<kbd>S</kbd>
+<span class="sound">Cartoonish</span>
+</div>
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">Button</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">Moos</span>
+</div>
+<div data-key="71" class="key">
+<kbd>G</kbd>
+<span class="sound">Hi Hat</span>
+</div>
+<div data-key="72" class="key">
+<kbd>H</kbd>
+<span class="sound">Farting</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">Water</span>
+</div>
+<div data-key="75" class="key">
+<kbd>K</kbd>
+<span class="sound">Tornado</span>
+</div>
+<div data-key="76" class="key">
+<kbd>L</kbd>
+<span class="sound">Bksmith</span>
+</div>
+</div>
+
+<audio data-key="65" src="/C:/Users/HP/Desktop/COVID-19/sounds/Applause-SoundBible.wav"></audio>
+<audio data-key="83" src="/C:/Users/HP/Desktop/COVID-19/sounds/Boing Cartoonish.wav"></audio>
+<audio data-key="68" src="/C:/Users/HP/Desktop/COVID-19/sounds/Button.wav"></audio>
+<audio data-key="70" src="/C:/Users/HP/Desktop/COVID-19/sounds/Cow Moos.wav"></audio>
+<audio data-key="71" src="/C:/Users/HP/Desktop/COVID-19/sounds/hi hat.mp3"></audio>
+<audio data-key="72" src="/C:/Users/HP/Desktop/COVID-19/sounds/Person Farting.wav"></audio>
+<audio data-key="74" src="/C:/Users/HP/Desktop/COVID-19/sounds/Tornado_Siren.wav"></audio>
+<audio data-key="75" src="/C:/Users/HP/Desktop/COVID-19/sounds/water dropes.wav"></audio>
+<audio data-key="76" src="/C:/Users/HP/Desktop/COVID-19/sounds/BKSMITH.mp3"></audio>
+</body>
+</html>
+
+<script>
+function keyP(e)
+{
+var audio=document.querySelector(`audio[data-key="${e.keyCode}"]`);
+console.log(audio);
+var key=document.querySelector(`.key[data-key="${e.keyCode}"]`);
+//console.log(key);
+if(!audio) return;
+audio.currentTime=0;
+audio.play();
+key.classList.add('playing');
+
+}
+
+function removeT(e)
+{
+if(e.propertyName!=='transform') return;
+console.log(e.propertyName);
+this.classList.remove('playing');
+}
+
+var keys=document.querySelectorAll('.key');
+//console.log(keys);
+keys.forEach(key => key.addEventListener('transitionend',removeT));
+
+window.addEventListener('keydown',keyP);
+
+</script>

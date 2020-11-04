@@ -1,0 +1,21 @@
+<html>
+<p id="d1">.....</p>
+<input type="button" value="ok" onclick=fun()></input>
+</html>
+
+
+<script>
+function fun(){
+var msg={"City 1":"Bhopal","City 2":"Indore",City3:"Jaipure",City4:"Chennai",City5:"Mumbai"};
+var v="" ;
+var t;
+for(t in msg)
+{
+v=v+" "+t+" = "+msg[t]+"</br>";
+}
+document.getElementById("d1").innerHTML="<h5>"+v+"</h5>";
+}
+</script>
+
+
+

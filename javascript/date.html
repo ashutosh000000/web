@@ -1,0 +1,55 @@
+
+<script>
+function fun(){
+var ob;
+ob=new Date();
+var t=parseInt(ob.getHours());
+var y=ob.getDay();
+var u=ob.getMonth();
+var i=ob.getFullYear();
+var o=ob.getDate();
+var p=ob.getMilliseconds();
+var a=ob.getMinutes();
+var s=ob.getSeconds();
+if(t<12){
+document.getElementById("v3").innerHTML="<h5>Good Morning</h5>";
+}
+else{
+if((t<=17)&&(t>=12)){
+document.getElementById("v3").innerHTML="<h5>Good Afternoon</h5>";
+}
+else{if((t<=20)&&(t>17)){
+document.getElementById("v3").innerHTML="<h5>Good Evening</h5>";
+}
+else{if(t>20&&t<=3){
+document.getElementById("v3").innerHTML="<h5>Good Night</h5>";
+}}
+}
+}
+document.getElementById("v1").innerHTML="<h5>HELLO</h5> ";
+document.getElementById("v2").innerHTML=t;
+document.getElementById("v4").innerHTML="<h5>"+y+" Day</h5>";
+document.getElementById("v5").innerHTML="<h5>"+u+" Month</h5>";
+document.getElementById("v6").innerHTML="<h5>"+i+" Full Year</h5>";
+document.getElementById("v7").innerHTML="<h5>"+o+" Date</h5>";
+document.getElementById("v8").innerHTML="<h5>"+p+" Milliseconds</h5>";
+document.getElementById("v9").innerHTML="<h5>"+a+" minutes</h5>";
+document.getElementById("v10").innerHTML="<h5>"+s+" Seconds</h5>";
+//document.write(ob);
+}
+</script>
+
+
+<html>
+<p id="v1">........</p>
+<p id="v2">........</p>
+<p id="v3">........</p>
+<p id="v4">........</p>
+<p id="v5">........</p>
+<p id="v6">........</p>
+<p id="v7">........</p>
+<p id="v8">........</p>
+<p id="v9">........</p>
+<p id="v10">........</p>
+<input type="button" value="ok" onclick=fun()></input>
+</html>

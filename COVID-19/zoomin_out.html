@@ -1,0 +1,53 @@
+
+<p><p><img id="i1" onmouseover=increse() onmouseout=decrese() src="/C:/Users/HP/Downloads/imagess/Ashutosh.jpg" width="400" height="150"/></br>
+</p></p>
+<script>
+var width=400;
+var height=150;
+var difference=2;
+var ID=0;
+
+function increse()
+{
+//clearInterval(ID);
+ID=setInterval(zoomIn,50);
+
+}
+
+function decrese()
+{
+//clearInterval(ID);
+ID=setInterval(zoomOut,50);
+
+}
+function zoomIn()
+{
+if(width<450&&height<200){
+
+width=width+difference;
+height=height+difference;
+document.getElementById("i1").style.width=width;
+document.getElementById("i1").style.height=height;
+}
+else
+{
+clearInterval(ID);
+}
+}
+
+function zoomOut()
+{
+if(width>400&&height>150){
+
+width=width-difference;
+height=height-difference;
+document.getElementById("i1").style.width=width;
+document.getElementById("i1").style.height=height;
+}
+else
+{
+clearInterval(ID);
+}
+}
+
+</script>

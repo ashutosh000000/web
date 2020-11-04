@@ -1,0 +1,14 @@
+<input type="text" id="t1"></input><br>
+<input type="button" value="OK" onclick=fun()></input></br>
+<input type="text" id="t2"></input>
+
+<script>
+function fun(){
+var a=document.getElementById("t1").value;
+var t=a.charCodeAt();
+document.getElementById("t2").value=t;
+
+/*var a=parseInt(document.getElementById("t1").value);
+document.getElementById("t2").value=a;*/
+}
+</script>

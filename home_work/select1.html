@@ -1,0 +1,32 @@
+
+<input type="text" id="t1"></input><br>
+<input type="text" id="t2"></input><br>
+<input type="button" value="ok" onclick=fun()></input><br>
+
+<select id="s1">
+<option value="Mumbai">mumbai</option>
+<option value="Hydrabad">hydrabad</option>
+<option value="Chennai">chennai</option>
+<option value="Pune">pune</option>
+</select>
+
+<script>
+function fun()
+{
+var y="";
+var sele=document.getElementById("s1");
+var arr=[""];
+for(var h=0;h<sele.length;h++)
+{
+arr[arr.length]=sele.options[h].value;
+}
+
+for(var u=0;u<arr.length;u++)
+y=y+" "+arr[u];
+document.getElementById("t1").value=y;
+
+//sele.options[sele.selectedIndex].value;
+document.getElementById("t2").value=sele.options[sele.selectedIndex].value;
+//document.getElementById("t1").value=sele.options[sele.selectedIndex].value;
+}
+</script>

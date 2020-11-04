@@ -1,0 +1,101 @@
+<html>
+<head></head>
+<body>
+<p id="p1">....</p>
+<input type="button" value="FadeIn" onclick=fadeIn() ></input><br>
+<img id="i1" src="/C:/Users/HP/Downloads/imagess/Ashutosh.jpg"  alt="" width="400" height="150" />
+<img id="i2" src="/C:/Users/HP/Downloads/imagess/Ashutosh.jpg"  alt="" width="400" height="150"/><br>
+
+<img id="i3" src="/C:/Users/HP/Downloads/imagess/Ashutosh.jpg"  alt="" width="400" height="150"/>
+<img id="i4" src="/C:/Users/HP/Downloads/imagess/Ashutosh.jpg"  alt="" width="400" height="150"/></br>
+
+
+<input type="button" value="FadeOut" onclick=fadeOut() ></input>
+</body>
+</html>
+
+<script>
+var opacity=0;
+var ID=0;
+
+function fadeIn(){
+ID=setInterval(show,100);
+}
+function show(){
+//var img=document.getElementById("i1");
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i1")).getPropertyValue("opacity"));
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i2")).getPropertyValue("opacity"));
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i3")).getPropertyValue("opacity"));
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i4")).getPropertyValue("opacity"));
+if(opacity<1)
+{
+opacity=opacity+0.1;
+document.getElementById("i1").style.opacity=opacity;
+document.getElementById("i2").style.opacity=opacity;
+document.getElementById("i3").style.opacity=opacity;
+document.getElementById("i4").style.opacity=opacity;
+
+}
+else
+{
+clearInterval(ID);
+}
+}
+
+
+
+function fadeOut(){
+ID=setInterval(hide,100);
+}
+function hide(){
+//var img=document.getElementById("i1");
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i1")).getPropertyValue("opacity"));
+
+if(opacity>0)
+{
+opacity=opacity-0.1;
+document.getElementById("i1").style.opacity=opacity;
+}
+else
+{
+clearInterval(ID);
+}
+
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i2")).getPropertyValue("opacity"));
+
+if(opacity>0)
+{
+opacity=opacity-0.2;
+document.getElementById("i2").style.opacity=opacity;
+}
+else
+{
+clearInterval(ID);
+}
+
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i3")).getPropertyValue("opacity"));
+
+if(opacity>0)
+{
+opacity=opacity-0.25;
+document.getElementById("i3").style.opacity=opacity;
+}
+else
+{
+clearInterval(ID);
+}
+
+opacity=parseFloat(window.getComputedStyle(document.getElementById("i4")).getPropertyValue("opacity"));
+
+if(opacity>0)
+{
+opacity=opacity-0.75;
+document.getElementById("i4").style.opacity=opacity;
+}
+else
+{
+clearInterval(ID);
+}
+
+}
+</script>

@@ -1,0 +1,19 @@
+
+<html>
+<input type="text" id="v2"></input><br>
+<input type="button" value="OK" onclick=fun()></input>
+<p id ="v1">......</p>
+</html>
+<script>
+function fun() 
+{
+//var tab="";
+var num=parseInt(document.getElementById("v2").value);
+for(var a=1;a<=10;a++){
+var tab="";
+tab=tab+"<br>"+num+" * "+a+" = "+num*a;
+}
+document.getElementById("v1").innerHTML="<h5>"+tab+"</h5>";
+//document.getElementById("v1").innerHTML=a;
+}
+</script>

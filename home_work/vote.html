@@ -1,0 +1,27 @@
+
+<html>
+<head></head>
+<body>
+<div><h5>enter the age below</h5></div>
+<input type="text" id="i1"></input><br>
+<input type="button" value="OK" onclick=vote()></input><br>
+<p id="i3">.......</p>
+<input type="text" value="output" id="i2"></input></br>
+</body>
+</html>
+
+<script>
+function vote(){
+var a=parseInt(document.getElementById("i1").value);
+//var ag=parseInt(a);
+
+document.getElementById("i3").innerHTML=(a+1);
+if(a<18){
+document.getElementById("i2").value="you are not eligible "+(18-a)+" years more required";
+}
+else
+{
+document.getElementById("i2").value="you are eligible";
+}
+}
+</script>

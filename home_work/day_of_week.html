@@ -1,0 +1,36 @@
+<input type="text" id="t1"></input><br>
+<input type="text" id="t2"></input>
+<p id="p1">.....</p>
+<p id="p2">.....</p>
+<p id="p3">.....</p>
+<p id="p4">.....</p>
+<input type="button" value="ok" onclick=solution()></input>
+
+<script>
+//S, K
+function solution(){
+var S=document.getElementById("t1").value;
+var K=parseInt(document.getElementById("t2").value);
+var d=K%7;
+vat t=0;
+var h=0;
+var day={1:"Mon",2:"Tue",3:"Wed",4:"Thu",5:"Fri",6:"Sat",7:"Sun"}
+for(t in day){
+if(S==day){
+document.getElementById("p2").innerHTML=S+"...S";
+h=parseInt(t);
+document.getElementById("p3").innerHTML=h+"...h";
+break;
+}
+}
+h=h+d;
+if(h>7){h=h%7;}
+for(t in day){
+if(t==h){
+//return day;
+document.getElementById("p1").innerHTML=day;
+break;
+}
+}
+}
+</script>

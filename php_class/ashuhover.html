@@ -1,0 +1,53 @@
+<html>
+<head><style>
+.tod{
+position:respective;
+display:inline-block;
+border-bottom:5px dotted black;
+}
+.tod .todt{
+visibility:hidden;
+width:40px;
+background-color:rgb(70,70,70);
+color:rgb(150,150,150);
+text-shadow:1px 2px red;
+text-align:center;
+border-radius:12px;
+padding:5px 5px;
+//courser:placed;
+position:absolute;
+z-index:2;
+}
+.tod .tadt{
+visibility:hidden;
+width:70px;
+background-color:rgb(70,70,70);
+color:rgb(150,150,150);
+text-shadow:1px 2px red;
+text-align:center;
+border-radius:12px;
+padding:5px 5px;
+
+position:absolute;
+top:31px;
+left:634px;
+z-index:0;
+
+}
+
+.tod:hover .tadt{
+visibility:visible;
+}
+
+.tod:hover .todt{
+visibility:visible;
+}
+</style>
+</head>
+<body style="text-align:center";>
+<div class="tod">Ashutosh Jaiswal
+<span class="todt">is a good boy</span>
+<span class="tadt">Bansal institute of science and technology</span>
+</div>
+</body>
+</html>
